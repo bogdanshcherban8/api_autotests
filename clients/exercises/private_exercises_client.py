@@ -1,45 +1,49 @@
-from typing import TypedDict
-
 from httpx import Response
 
 from clients.api_client import APIClient
+from clients.builders.private_http_builder import get_private_http_client, AuthenticationSchema
+from clients.exercises.exercises_schema import GetExercisesQuerySchema, CreateExercisesRequestSchema, \
+    CreateExercisesResponseSchema, UpdateExercisesRequestSchema, DeleteExercisesResponseSchema, \
+    GetExercisesResponseSchema, UpdateExercisesResponseSchema
 
 
-class GetExercisesQueryDict(TypedDict):
-    course_id: str
+# Приватные методы, которые требуют авторизацию и работают с эксерсайзами
+class PrivateExercisesClient(APIClient):
+    def get_exercises_api(self, request: GetExercisesQuerySchema) -> Response:
+        return self.get("/api/v1/exercises", params=request.model_dump())
 
-
-class CreateExercisesRequestDict(TypedDict):
-    title: str
-    course_id: str
-    maxScore: int
-    minScore: int
-    orderIndex: int
-    description: str
-    estimatedTime: str
-
-
-class UpdateExercisesRequestDict(TypedDict):
-    title: str | None
-    maxScore: int | None
-    minScore: int | None
-    orderIndex: int | None
-    description: str | None
-    estimatedTime: str | None
-
-
-class ExercisesClient(APIClient):
-    def get_exercises_api(self, request: GetExercisesQueryDict) -> Response:
-        return self.get("/api/v1/exercises", params=request)
+    def get_exercises(self, request: GetExercisesQuerySchema) -> GetExercisesResponseSchema:
+        response = self.get_exercises_api(request)
+        return GetExercisesResponseSchema.model_validate_json(response.text)
 
     def get_exercise_api(self, exercise_id: str) -> Response:
         return self.get(f"/api/v1/exercises/{exercise_id}")
 
-    def create_exercise_api(self, request: CreateExercisesRequestDict) -> Response:
-        return self.post("/api/v1/exercises", json=request)
+    def get_exercise(self, exercise_id: str) -> GetExercisesResponseSchema:
+        response = self.get_exercise_api(exercise_id)
+        return GetExercisesResponseSchema.model_validate_json(response.text)
 
-    def update_exercise_api(self, request: UpdateExercisesRequestDict, exercise_id: str)->Response:
-        return self.patch(f"/api/v1/exercises/{exercise_id}", json=request)
+    def create_exercise_api(self, request: CreateExercisesRequestSchema) -> Response:
+        return self.post("/api/v1/exercises", json=request.model_dump(by_alias=True))
 
-    def delete_exercise_api(self, exercise_id:str)->Response:
+    def create_exercise(self, request: CreateExercisesRequestSchema) -> CreateExercisesResponseSchema:
+        response = self.create_exercise_api(request)
+        return CreateExercisesResponseSchema.model_validate_json(response.text)
+
+    def update_exercise_api(self, exercise_id: str, request: UpdateExercisesRequestSchema) -> Response:
+        return self.patch(f"/api/v1/exercises/{exercise_id}", json=request.model_dump(by_alias=True))
+
+    def update_exercise(self, exercise_id: str, request: UpdateExercisesRequestSchema) -> UpdateExercisesResponseSchema:
+        response = self.update_exercise_api(exercise_id, request)
+        return UpdateExercisesResponseSchema.model_validate_json(response.text)
+
+    def delete_exercise_api(self, exercise_id: str) -> Response:
         return self.delete(f"/api/v1/exercises/{exercise_id}")
+
+    def delete_exercise(self, exercise_id: str) -> DeleteExercisesResponseSchema:
+        response = self.delete_exercise_api(exercise_id)
+        return DeleteExercisesResponseSchema.model_validate_json(response.text)
+
+
+def get_private_exercises_client(user: AuthenticationSchema) -> PrivateExercisesClient:
+    return PrivateExercisesClient(client=get_private_http_client(user))

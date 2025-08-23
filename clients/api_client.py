@@ -4,6 +4,7 @@ from httpx import Client, Response, URL, QueryParams
 from httpx._types import RequestData, RequestFiles
 
 
+# Базовые методы, которые будут наследоваться
 class APIClient:
     def __init__(self, client: Client):
         self.client = client

@@ -1,35 +1,48 @@
-from typing import TypedDict
-
 from httpx import Response
 
 from clients.api_client import APIClient
+from clients.builders.private_http_builder import get_private_http_client, AuthenticationSchema
+from clients.courses.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema, GetCoursesQuerySchema, \
+    UpdateCourseRequestSchema, DeleteCourseResponseSchema, GetCourseResponseSchema, UpdateCourseResponseSchema
 
 
-class GetCoursesQueryDict(TypedDict):
-    userId: str
-class CreateCourseRequestDict(TypedDict):
-    title: str
-    maxScore: int
-    minScore: int
-    description: str
-    estimatedTime: str
-    previewFileId: str
-    createdByUserId: str
-class UpdateCourseRequestDict(TypedDict):
-    title: str | None
-    maxScore: int | None
-    minScore: int | None
-    description: str | None
-    estimatedTime: str | None
-class CoursesClient(APIClient):
-    def create_courses_api(self, request: CreateCourseRequestDict) -> Response:
-        return self.post("/api/v1/courses", json=request)
+# Приватные методы, которые требуют авторизацию и работают с курсами
+class PrivateCoursesClient(APIClient):
+    def create_course_api(self, request: CreateCourseRequestSchema) -> Response:
+        return self.post("/api/v1/courses", json=request.model_dump(by_alias=True))
 
-    def get_courses_api(self, request: GetCoursesQueryDict) -> Response:
-        return self.get("/api/v1/courses", params=request)
+    def create_course(self, request: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
+        response = self.create_course_api(request)
+        return CreateCourseResponseSchema.model_validate_json(response.text)
+
+    def get_courses_api(self, request: GetCoursesQuerySchema) -> Response:
+        return self.get("/api/v1/courses", params=request.model_dump(by_alias=True))
+
+    def get_courses(self, request: GetCoursesQuerySchema) -> GetCourseResponseSchema:
+        response = self.get_courses_api(request)
+        return GetCourseResponseSchema.model_validate_json(response.text)
 
     def get_course_api(self, course_id: str) -> Response:
-        return self.get(f"/api/v1/courses{course_id}")
+        return self.get(f"/api/v1/courses/{course_id}")
 
-    def update_courses_api(self, course_id: str, request: UpdateCourseRequestDict) -> Response:
-        return self.patch(f"/api/v1/courses{course_id}", json=request)
+    def get_course(self, course_id: str) -> GetCourseResponseSchema:
+        response = self.get_course_api(course_id)
+        return GetCourseResponseSchema.model_validate_json(response.text)
+
+    def update_course_api(self, course_id: str, request: UpdateCourseRequestSchema) -> Response:
+        return self.patch(f"/api/v1/courses/{course_id}", json=request.model_dump(by_alias=True))
+
+    def update_course(self, course_id: str, request: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:
+        response = self.update_course_api(course_id, request)
+        return UpdateCourseResponseSchema.model_validate_json(response.text)
+
+    def delete_course_api(self, course_id: str) -> Response:
+        return self.delete(f"/api/v1/courses/{course_id}")
+
+    def delete_course(self, course_id: str) -> DeleteCourseResponseSchema:
+        response = self.delete_course_api(course_id)
+        return DeleteCourseResponseSchema.model_validate_json(response.text)
+
+
+def get_private_courses_client(user: AuthenticationSchema) -> PrivateCoursesClient:
+    return PrivateCoursesClient(client=get_private_http_client(user))

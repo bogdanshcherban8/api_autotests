@@ -1,0 +1,1 @@
+pytest_plugins=["fixtures.browsers.authentication", "fixtures.browsers.users", "fixtures.browsers.files", "fixtures.browsers.courses"]
