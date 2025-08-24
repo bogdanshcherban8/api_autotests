@@ -1,1 +1,1 @@
-pytest_plugins=["fixtures.browsers.authentication", "fixtures.browsers.users", "fixtures.browsers.files", "fixtures.browsers.courses"]
+pytest_plugins=["fixtures.authentication", "fixtures.users", "fixtures.files", "fixtures.courses", "fixtures.exercises"]

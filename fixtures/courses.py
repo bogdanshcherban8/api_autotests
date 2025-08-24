@@ -3,8 +3,9 @@ from pydantic import BaseModel
 
 from clients.courses.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema
 from clients.courses.private_courses_client import PrivateCoursesClient, get_private_courses_client
-from fixtures.browsers.files import FileData
-from fixtures.browsers.users import UserData
+from fixtures.files import FileData
+from fixtures.users import UserData
+
 
 
 class CourseData(BaseModel):
@@ -22,5 +23,5 @@ def private_courses_client(create_user:UserData)->PrivateCoursesClient:
     return get_private_courses_client(create_user.login_user)
 
 @pytest.fixture
-def private_courses_client_manual_create_file(create_user:UserData)->PrivateCoursesClient:
+def private_courses_client_manual_create_course(create_user:UserData)->PrivateCoursesClient:
     return get_private_courses_client(create_user.login_user)

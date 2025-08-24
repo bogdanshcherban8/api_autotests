@@ -9,7 +9,7 @@ from tools.faker import email_param
 from tools.json_schema import validate_json_schema
 from tools.assertions.methods.assert_status_code import assert_status_code
 
-
+@pytest.mark.create
 @pytest.mark.users
 @pytest.mark.regression
 class TestCreateUser:

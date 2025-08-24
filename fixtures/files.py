@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
 from clients.files.private_files_client import PrivateFilesClient, get_private_files_client
-from fixtures.browsers.users import UserData
+from fixtures.users import UserData
 
 
 class FileData(BaseModel):

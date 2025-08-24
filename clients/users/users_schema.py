@@ -33,10 +33,6 @@ class UpdateUserResponseSchema(BaseModel):
     user: UserSchema
 
 
-class DeleteUserResponseSchema(BaseModel):
-    string: str
-
-
 class CreateUserRequestSchema(BaseModel):
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
     email: EmailStr = Field(default_factory=fake.email)

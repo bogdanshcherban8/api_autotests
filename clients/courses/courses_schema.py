@@ -4,7 +4,7 @@ from pydantic.alias_generators import to_camel
 from tools.faker import fake
 
 
-class GetCoursesQuerySchema(BaseModel):
+class GetCourseQuerySchema(BaseModel):
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
     user_id: str
 
@@ -64,10 +64,11 @@ class CreateCourseResponseSchema(BaseModel):
 class GetCourseResponseSchema(BaseModel):
     course: CourseSchema
 
+class GetCoursesResponseSchema(BaseModel):
+    courses: list[CourseSchema]
+
 
 class UpdateCourseResponseSchema(BaseModel):
     course: CourseSchema
 
 
-class DeleteCourseResponseSchema(BaseModel):
-    string: str

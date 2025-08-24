@@ -4,12 +4,12 @@ import pytest
 
 from clients.authentication.authentication_schema import LoginRequestSchema, LoginResponseSchema
 from clients.authentication.public_authentication_client import PublicAuthenticationClient
-from fixtures.browsers.users import UserData
+from fixtures.users import UserData
 
 from tools.assertions.methods.assert_status_code import assert_status_code
 from tools.assertions.authentication import assert_login_response
 from tools.json_schema import validate_json_schema
-
+@pytest.mark.login
 @pytest.mark.authentication
 @pytest.mark.regression
 class TestLogin:

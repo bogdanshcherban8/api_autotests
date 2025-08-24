@@ -22,5 +22,3 @@ class GetFileResponseSchema(BaseModel):
     file: FileSchema
 
 
-class DeleteFileResponseSchema(BaseModel):
-    string: str

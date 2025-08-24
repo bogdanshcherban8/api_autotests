@@ -2,7 +2,7 @@ from httpx import Response
 
 from clients.api_client import APIClient
 from clients.builders.private_http_builder import get_private_http_client, AuthenticationSchema
-from clients.users.users_schema import CreateUserResponseSchema, UpdateUserRequestSchema, DeleteUserResponseSchema, \
+from clients.users.users_schema import UpdateUserRequestSchema, \
     GetUserResponseSchema, UpdateUserResponseSchema
 
 
@@ -15,11 +15,11 @@ class PrivateUsersClient(APIClient):
         response = self.get_user_me_api()
         return GetUserResponseSchema.model_validate_json(response.text)
 
-    def get_user_id_api(self, user_id: str) -> Response:
+    def get_user_by_id_api(self, user_id: str) -> Response:
         return self.get(f"/api/v1/users/{user_id}")
 
-    def get_user_id(self, user_id: str) -> GetUserResponseSchema:
-        response = self.get_user_id_api(user_id)
+    def get_user_by_id(self, user_id: str) -> GetUserResponseSchema:
+        response = self.get_user_by_id_api(user_id)
         return GetUserResponseSchema.model_validate_json(response.text)
 
     def update_user_api(self, user_id: str, request: UpdateUserRequestSchema) -> Response:
@@ -31,10 +31,6 @@ class PrivateUsersClient(APIClient):
 
     def delete_user_api(self, user_id: str) -> Response:
         return self.delete(f"/api/v1/users/{user_id}")
-
-    def delete_user(self, user_id: str) -> DeleteUserResponseSchema:
-        response = self.delete_user_api(user_id)
-        return DeleteUserResponseSchema.model_validate_json(response.text)
 
 
 def get_private_users_client(user: AuthenticationSchema) -> PrivateUsersClient:
