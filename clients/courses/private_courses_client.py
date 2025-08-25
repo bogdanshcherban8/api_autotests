@@ -22,10 +22,10 @@ class PrivateCoursesClient(APIClient):
         response = self.get_courses_api(request)
         return GetCoursesResponseSchema.model_validate_json(response.text)
 
-    def get_course_api(self, course_id: str) -> Response:
+    def get_course_by_id_api(self, course_id: str) -> Response:
         return self.get(f"/api/v1/courses/{course_id}")
 
-    def get_course(self, course_id: str) -> GetCourseResponseSchema:
+    def get_course_by_id(self, course_id: str) -> GetCourseResponseSchema:
         response = self.get_course_api(course_id)
         return GetCourseResponseSchema.model_validate_json(response.text)
 

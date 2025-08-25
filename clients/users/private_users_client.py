@@ -23,7 +23,7 @@ class PrivateUsersClient(APIClient):
         return GetUserResponseSchema.model_validate_json(response.text)
 
     def update_user_api(self, user_id: str, request: UpdateUserRequestSchema) -> Response:
-        return self.patch(f"/api/v1/users/{user_id}", json=request.model_dump(by_alias=True))
+        return self.patch(f"/api/v1/users/{user_id}", json=request.model_dump(by_alias=True, exclude_none=True))
 
     def update_user(self, user_id: str, request: UpdateUserRequestSchema) -> UpdateUserResponseSchema:
         response = self.update_user_api(user_id, request)

@@ -16,11 +16,11 @@ class PrivateExercisesClient(APIClient):
         response = self.get_exercises_api(request)
         return GetExercisesResponseSchema.model_validate_json(response.text)
 
-    def get_exercise_api(self, exercise_id: str) -> Response:
+    def get_exercise_by_id_api(self, exercise_id: str) -> Response:
         return self.get(f"/api/v1/exercises/{exercise_id}")
 
-    def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
-        response = self.get_exercise_api(exercise_id)
+    def get_exercise_by_id(self, exercise_id: str) -> GetExerciseResponseSchema:
+        response = self.get_exercise_by_id_api(exercise_id)
         return GetExerciseResponseSchema.model_validate_json(response.text)
 
     def create_exercise_api(self, request: CreateExerciseRequestSchema) -> Response:

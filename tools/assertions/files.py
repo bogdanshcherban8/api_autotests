@@ -32,40 +32,23 @@ def assert_get_file_response(get_file_response: GetFileResponseSchema, create_us
     assert_get_file(get_file_response.file, create_user_response)
 
 
-def assert_create_file_with_empty_filename(actual: ValidationErrorResponseSchema):
+def assert_create_file_with_incorrect_data_response(actual: ValidationErrorResponseSchema, invalid_value, location):
     expected = ValidationErrorResponseSchema(
         details=[
             ValidationErrorSchema(
                 type="string_too_short",
-                input="",
+                input=invalid_value,
                 context={"min_length": 1},
                 message="String should have at least 1 character",
-                location=["body", "filename"]
+                location=["body", location]
             )
         ]
     )
     assert_validation_error_response(actual, expected)
-
-
-def assert_create_file_with_empty_directory(actual: ValidationErrorResponseSchema):
-    expected = ValidationErrorResponseSchema(
-        details=[
-            ValidationErrorSchema(
-                type="string_too_short",
-                input="",
-                context={"min_length": 1},
-                message="String should have at least 1 character",
-                location=["body", "directory"]
-            )
-        ]
-    )
-    assert_validation_error_response(actual, expected)
-
 
 def assert_file_not_found_response(actual: InternalErrorResponseSchema):
     expected = InternalErrorResponseSchema(details="File not found")
     assert_internal_error_response(actual, expected)
-
 
 def assert_get_file_with_incorrect_file_id_response(actual: ValidationErrorResponseSchema):
     expected = ValidationErrorResponseSchema(
