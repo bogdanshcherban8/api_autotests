@@ -1,20 +1,34 @@
 from http import HTTPStatus
 
+import allure
 import pytest
+from allure_commons.types import Severity
 
 from clients.errors_schema import ValidationErrorResponseSchema, ErrorsData
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
 from clients.exercises.private_exercises_client import PrivateExercisesClient
 from fixtures.courses import CourseData
-from tools.assertions.exercises import assert_create_exercise, assert_create_exercise_with_incorrect_data_response
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
+from tools.assertions.exercises import assert_create_exercise_with_incorrect_data_response, \
+    assert_create_exercise_response
 from tools.assertions.methods.assert_status_code import assert_status_code
 from tools.json_schema import validate_json_schema
 
 
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.EXERCISES)
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeature.EXERCISES)
 @pytest.mark.create
 @pytest.mark.exercises
 @pytest.mark.regression
 class TestCreateExercise:
+    @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.severity(Severity.MINOR)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
+    @allure.title("User creates the exercise with correct course_id")
     def test_create_exercise(self, create_course: CourseData,
                              private_exercises_client_manual_create_exercise: PrivateExercisesClient):
         request = CreateExerciseRequestSchema(course_id=create_course.response.course.id)
@@ -25,8 +39,12 @@ class TestCreateExercise:
         validate_json_schema(instance=response_json, schema=CreateExerciseResponseSchema)
 
         assert_status_code(response.status_code, HTTPStatus.OK)
-        assert_create_exercise(request, response_json)
+        assert_create_exercise_response(request, response_json)
 
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.MINOR)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.title("User creates the exercise with incorrect data")
     @pytest.mark.errors
     @pytest.mark.parametrize("field, incorrect_value, location, type_text, context, message",
                              [("title", "", "title", ErrorsData.type_str, ErrorsData.context_str,

@@ -1,22 +1,35 @@
 from http import HTTPStatus
 
+import allure
 import pytest
+from allure_commons.types import Severity
 
 from clients.courses.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema
 from clients.courses.private_courses_client import PrivateCoursesClient
 from clients.errors_schema import ValidationErrorResponseSchema, ErrorsData
 from fixtures.files import FileData
 from fixtures.users import UserData
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
 from tools.assertions.courses import assert_create_course_response, assert_create_course_with_incorrect_data_response
 
 from tools.assertions.methods.assert_status_code import assert_status_code
 from tools.json_schema import validate_json_schema
 
 
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.COURSES)
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeature.COURSES)
 @pytest.mark.create
 @pytest.mark.courses
 @pytest.mark.regression
 class TestCreateCourse:
+    @allure.severity(Severity.NORMAL)
+    @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
+    @allure.title("User creates course with correct data")
     def test_create_course(self, create_file: FileData, create_user: UserData,
                            private_courses_client_manual_create_course: PrivateCoursesClient):
         request = CreateCourseRequestSchema(preview_file_id=create_file.response.file.id,
@@ -30,6 +43,10 @@ class TestCreateCourse:
         assert_status_code(response.status_code, HTTPStatus.OK)
         assert_create_course_response(request=request, response=response_json)
 
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.title("User creates course with incorrect data")
     @pytest.mark.errors
     @pytest.mark.parametrize("field, incorrect_value, location, type_text, context, message",
                              [("title", "", "title", ErrorsData.type_str, ErrorsData.context_str,
@@ -39,7 +56,9 @@ class TestCreateCourse:
                               ("estimated_time", "", "estimatedTime", ErrorsData.type_str, ErrorsData.context_str,
                                ErrorsData.message_str),
                               ("preview_file_id", "", "previewFileId", ErrorsData.type_uuid, ErrorsData.context_uuid,
-                               ErrorsData.message_uuid), ("created_by_user_id", "", "createdByUserId", ErrorsData.type_uuid, ErrorsData.context_uuid,
+                               ErrorsData.message_uuid),
+                              ("created_by_user_id", "", "createdByUserId", ErrorsData.type_uuid,
+                               ErrorsData.context_uuid,
                                ErrorsData.message_uuid)])
     def test_create_course_with_incorrect_data(self, create_file: FileData, create_user: UserData,
                                                private_courses_client_manual_create_course: PrivateCoursesClient, field,
