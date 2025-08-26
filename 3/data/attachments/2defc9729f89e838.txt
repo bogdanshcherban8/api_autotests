@@ -1,0 +1,2 @@
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://api-server:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://api-server:8000/api/v1/users
