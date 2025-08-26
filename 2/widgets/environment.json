@@ -1,0 +1,1 @@
+[{"values":["{'image_jpg_file': PosixPath('testdata/image.jpg')}"],"name":"test_data"},{"values":["{'client_url': HttpUrl('http://api-server:8000/'), 'timeout': 100.0}"],"name":"http_client"},{"values":["allure-results"],"name":"allure_results_dir"}]

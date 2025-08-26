@@ -1,0 +1,10 @@
+curl -X 'POST' \
+  'http://api-server:8000/api/v1/users' \
+  -H 'host: api-server:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'content-length: 144' \
+  -H 'content-type: application/json' \
+  -d '{"email":"sofon2022@gmail.com","password":"s85TqUKi9#","lastName":"Мамонтов","firstName":"Назар","middleName":"Захаровна"}'
