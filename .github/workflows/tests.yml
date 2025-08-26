@@ -28,7 +28,7 @@ jobs:
 
       # 3. Шаг для клонирования репозитория с тестовым сервером в рабочую среду
       - name: Clone test server repository
-        run: git clone https://github.com/bogdanshcherban8/qa-automation-engineer-api-course.git
+        run: git clone https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/bogdanshcherban8/qa-automation-engineer-api-course.git
 
       # 4. Шаг для установки зависимостей для тестового сервера
       - name: Install test server dependencies
@@ -67,7 +67,7 @@ jobs:
 
       # 9. Шаг для генерации и отображения отчёта Allure
       - name: Generates Allure Report with history
-        uses: simple-elf/allure-report-action@v1.12  # Используем готовое решение из GitHub Marketplace для генерации Allure отчёта
+        uses: simple-elf/allure-report-action@v1.13  # Используем готовое решение из GitHub Marketplace для генерации Allure отчёта
         if: always()  # Этот шаг тоже всегда выполняется
         with:
           allure_results: allure-results  # Указываем каталог с результатами тестов
