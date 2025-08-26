@@ -1,0 +1,24 @@
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:17 Make GET request to http://localhost:8000/api/v1/exercises/4ee5dd82-c82f-4343-a09c-e50ad6ce46cf
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/exercises/4ee5dd82-c82f-4343-a09c-e50ad6ce46cf
+INFO     SCHEMA_ASSERTIONS:json_schema.py:12 Validate JSON schema
+INFO     BASE_ASSERTIONS:assert_status_code.py:8 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:44 Check get exercise response
+INFO     EXERCISES_ASSERTIONS:exercises.py:31 Check exercise
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that id equals to 4ee5dd82-c82f-4343-a09c-e50ad6ce46cf
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that title equals to Добиться правление еврейский точно поколение исследование термин. Некоторый лететь выбирать затянуться цепочка выбирать пространство.
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that course_id equals to 352c19e3-c7aa-4377-bf22-f8741233175d
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that max_score equals to 38
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that min_score equals to 16
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that order_index equals to 1
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that description equals to Одиннадцать легко функция даль.
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that estimated_time equals to 2 days

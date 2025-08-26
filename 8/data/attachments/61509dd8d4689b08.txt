@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjE2LjY3NDg3NiIsInVzZXJfaWQiOiIwMDE4MTQ0Ni03YWYzLTQ1OGItOTE1Mi0wYjY3ZDZkMjU5NTEifQ.f2AmFv87KCF7ThDVlb0R-m4lCpov7YSSn7dBE-eTRCI' \
+  -H 'content-length: 526' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Волк сходить результат прошептать покинуть выраженный. Волк возбуждение близко потянуться зачем виднеться дошлый. Остановить мягкий куча передо правление падаль.","courseId":"2101663c-f772-4c00-b32b-840cbebdba4b","maxScore":42,"minScore":19,"orderIndex":7,"description":"Порог спорт коричневый деньги казнь пламя.","estimatedTime":"4 days"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjEzLjY3MDYxOSIsInVzZXJfaWQiOiJmZjI3NmNhMy1jYmZjLTRkNDYtYmYyOS1lMGE2MWJkNTFkOGMifQ.DKAon4yX9tdsq6vK1Up6DWamPe9ZurnZPfO8H3UO4vg' \
+  -H 'content-length: 456' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Добиться правление еврейский точно поколение исследование термин. Некоторый лететь выбирать затянуться цепочка выбирать пространство.","courseId":"352c19e3-c7aa-4377-bf22-f8741233175d","maxScore":38,"minScore":16,"orderIndex":1,"description":"Одиннадцать легко функция даль.","estimatedTime":"2 days"}'

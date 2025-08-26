@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjAyLjg0MDY2MiIsInVzZXJfaWQiOiJiNWJjNWRjMi05NGE0LTQ3MDMtYjY1ZC1jZjQxOTIzYTkyYWIifQ.G42J_yjpml-OErvwJ8DE8J-1QSu8qKqrIJEUvNu4ZXk' \
+  -H 'content-length: 490' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Хозяйка сохранять кольцо спичка бабочка торопливый зеленый полностью.\nПрежний зарплата естественный отражение запустить.","maxScore":87,"minScore":6,"description":"Магазин манера банк прошептать князь.","estimatedTime":"1 weeks","previewFileId":"557b27b5-07db-43bb-bffb-cce562eca76b","createdByUserId":"b5bc5dc2-94a4-4703-b65d-cf41923a92ab"}'

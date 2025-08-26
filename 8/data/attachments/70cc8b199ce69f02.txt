@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA4Ljg1NjY4NSIsInVzZXJfaWQiOiI4YjIzNTBlYS05OTM3LTQ2ZjAtODllOS0xNzM4M2UzYmVmZTIifQ.FR3ZJArv05qeyDzYFOEXZAlVMWxcvKwKIGzvC3KPvAs' \
+  -H 'content-length: 485' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Передо сопровождаться легко свежий крутой увеличиваться угодный. Промолчать процесс набор рота грустный природа.","maxScore":59,"minScore":8,"description":"Народ горький один академик самостоятельно.","estimatedTime":"3 weeks","previewFileId":"8fae33ed-8010-4ba5-b055-5f3eef61825c","createdByUserId":"8b2350ea-9937-46f0-89e9-17383e3befe2"}'

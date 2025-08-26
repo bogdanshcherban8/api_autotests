@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjEwLjYzMDc5MCIsInVzZXJfaWQiOiI5NjM5NzNmMy1mMWM4LTQ3NmMtYWU1ZS0wMWU2YTRmYjkxYmMifQ.BC6EO_OaZD0YRXaccFLa9PzVZNtcQdwEMgcANTByfy8' \
+  -H 'content-length: 593' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Смертельный художественный близко. Угроза пространство слишком настать народ магазин радость. Естественный боец палата остановить упорно кидать чем.","maxScore":60,"minScore":34,"description":"Мягкий командир пропадать коллектив пересечь остановить изредка.","estimatedTime":"1 weeks","previewFileId":"45c4021b-6aa1-4093-bb8c-f56ccba3fcd1","createdByUserId":"963973f3-f1c8-476c-ae5e-01e6a4fb91bc"}'

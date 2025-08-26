@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI3OjU5LjUzNjY2MyIsInVzZXJfaWQiOiI2MjljZTc2MS0zMzc4LTQwZWItOWFkYS0yNTYxYzI5NWZiMTQifQ.F0yEgUR8Kh6n4h7A_VTNrqyXtarofu9yDp2oW-zp36Y' \
+  -H 'content-length: 555' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Носок передо мусор тревога. Граница мучительно выбирать построить построить космос похороны человечек. Господь плясать четыре правый.","maxScore":89,"minScore":48,"description":"Ребятишки пасть командование командир банда четко командование.","estimatedTime":"","previewFileId":"de4f3255-7ee9-478d-9166-f20403ca12b8","createdByUserId":"4557a35d-941a-4675-870e-7abe9db9601a"}'

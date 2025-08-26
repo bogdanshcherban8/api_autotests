@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjAxLjY2MzE5NCIsInVzZXJfaWQiOiI0NzVmYWE0NS05YjM5LTQ1NTItYTYzNi1jNjQ1MjVhZjBkYmEifQ.L9FwEwmImPdSe9rVxB6r1VYDzePbJrREl2T0dQCKseI' \
+  -H 'content-length: 565' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Бак что выраженный поколение. Запретить идея решение перебивать приятель прощение команда. Появление пол спорт потянуться вздрогнуть бок. Анализ процесс разводить точно.","maxScore":91,"minScore":8,"description":"Ремень хозяйка заведение вытаскивать аж жить вряд.","estimatedTime":"3 weeks","previewFileId":"6ce7ebfa-5015-49e5-bfaa-104160ab5684","createdByUserId":""}'

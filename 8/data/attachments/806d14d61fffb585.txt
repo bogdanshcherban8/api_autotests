@@ -1,0 +1,31 @@
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:17 Make GET request to http://localhost:8000/api/v1/courses/21155daf-129b-4c72-9cd9-ecf97656aebe
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/courses/21155daf-129b-4c72-9cd9-ecf97656aebe
+INFO     SCHEMA_ASSERTIONS:json_schema.py:12 Validate JSON schema
+INFO     BASE_ASSERTIONS:assert_status_code.py:8 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:81 Check get course response
+INFO     COURSES_ASSERTIONS:courses.py:60 Check course
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that id equals to 21155daf-129b-4c72-9cd9-ecf97656aebe
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that title equals to Дрогнуть радость пространство сверкать хлеб разводить собеседник. Славный редактор дальний плод поезд материя возбуждение.
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that max_score equals to 98
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that min_score equals to 3
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that description equals to Спорт снимать неправда пятеро.
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that estimated_time equals to 1 weeks
+INFO     FILES_ASSERTIONS:files.py:33 Check file
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that id equals to 6ec95ebe-2da0-4d0b-b7ce-e2d0f44ad662
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that filename equals to image.jpg
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that directory equals to testdata
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that url equals to http://localhost:8000/static/testdata/image.jpg
+INFO     USERS_ASSERTIONS:users.py:26 Check user
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that id equals to 45ff4795-851b-42ac-af18-fbfa1085d21a
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that email equals to hvorobev@example.net
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that last_name equals to Кабанова
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that first_name equals to Арефий
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that middle_name equals to Оскаровна

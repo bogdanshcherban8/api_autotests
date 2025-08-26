@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA2LjQyOTQ0NSIsInVzZXJfaWQiOiJmY2IyM2NlYy1jZjI5LTRiYjYtYTU4NC02NWEwYmU2MmE3OTUifQ.uwJRMeI9_OzTqT3JN-LBLf-2gQch4I3gUP3sbovdUYE' \
+  -H 'content-length: 706' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Трясти уронить мелочь горький.\nРебятишки деловой механический картинка зеленый карандаш господь. Промолчать предоставить место налево витрина заложить. Госпожа слишком миф намерение место пересечь.","maxScore":53,"minScore":47,"description":"Расстройство салон означать носок сверкать рассуждение степь разнообразный.","estimatedTime":"3 weeks","previewFileId":"5c0352bc-0477-4493-a4a9-2645d9e935a9","createdByUserId":"fcb23cec-cf29-4bb6-a584-65a0be62a795"}'

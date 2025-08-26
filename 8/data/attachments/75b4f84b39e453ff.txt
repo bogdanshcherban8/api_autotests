@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA5LjQ0NzMyNyIsInVzZXJfaWQiOiIxODNhYjBhZi05NjQxLTQwMzItYjQ1YS0xNzMwZTlmY2NhMzUifQ.gT4PMSJtAxWAclF1TbdbmRE7uPTw4U8jApO5uWMfuRQ' \
+  -H 'content-length: 609' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Возможно передо функция невыносимый совещание. Район доставать сохранять означать изредка.\nГулять металл дошлый покидать передо пасть тута. Пропаганда советовать приходить спалить деловой.","maxScore":88,"minScore":17,"description":"Блин дрогнуть протягивать висеть.","estimatedTime":"3 weeks","previewFileId":"eb76b3af-bcb1-4cec-acff-c018a2e3d052","createdByUserId":"183ab0af-9641-4032-b45a-1730e9fcca35"}'

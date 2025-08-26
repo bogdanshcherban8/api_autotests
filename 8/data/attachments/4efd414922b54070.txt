@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA3LjYxNTg1MSIsInVzZXJfaWQiOiJkYzQxMjUyMi05YmZmLTRlYjctYTk2Mi03NTM2YzA4ZGQzZDQifQ.k55bbnUVBVgGzjAP7nnLRw3JKGB6nPiis6OFAy3qzt4' \
+  -H 'content-length: 599' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Лететь развитый заявление растеряться беспомощный. Пропаганда какой посвятить.\nЗато вперед жидкий интернет. Песенка терапия счастье левый. Применяться сынок кпсс медицина.","maxScore":100,"minScore":49,"description":"Результат сбросить спорт второй левый порода.","estimatedTime":"2 weeks","previewFileId":"8815558f-cd9e-42a4-9df9-53495e165982","createdByUserId":"dc412522-9bff-4eb7-a962-7536c08dd3d4"}'

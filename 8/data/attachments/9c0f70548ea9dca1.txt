@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjEyLjQ0NDA4NCIsInVzZXJfaWQiOiIyODk5ZDM0ZC02YjdkLTQwOTUtOTZiZS0xYzZlYTNkNjViZmEifQ.XBJJB4THrduxV5LpRSJrJZ2T-eiN0ebc46i8q0iddbI' \
+  -H 'content-length: 499' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Горький дрогнуть инвалид запустить. Миг пространство о невыносимый поезд лиловый. Научить зима оставить возникновение художественный.","maxScore":99,"minScore":5,"description":"Около белье намерение материя.","estimatedTime":"1 weeks","previewFileId":"70f22ffc-d974-495d-8247-9fe45e17cd7b","createdByUserId":"2899d34d-6b7d-4095-96be-1c6ea3d65bfa"}'

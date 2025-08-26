@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA4LjIwNTczNSIsInVzZXJfaWQiOiI5OTVlZTgzZi02NGM2LTRjOTQtYjZmNy1jMWRkMDRlOTM1NTAifQ.ylQTcIaaMD49iitHsAEIc2kZe4-TDpcsYT_1fXVGV_s' \
+  -H 'content-length: 576' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Висеть лапа протягивать медицина кольцо. Монета блин чувство скользить мальчишка а. Магазин опасность покидать банк мрачно светило затянуться штаб.","maxScore":90,"minScore":9,"description":"Лететь спешить разводить витрина хотеть через вытаскивать.","estimatedTime":"4 weeks","previewFileId":"1437d3af-dc3b-4440-bbf3-9ff51ae79386","createdByUserId":"995ee83f-64c6-4c94-b6f7-c1dd04e93550"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjAxLjA4MDEyMCIsInVzZXJfaWQiOiI0NDA5MzY1Ny1jMjRlLTQ2ZDItODFlNS01MmFjMGNhZGU5YTUifQ.raDAXNe8T9YMCB-miKUoLfvLadvFMXMy3vddmujlcIg' \
+  -H 'content-length: 566' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Командующий набор забирать выбирать дурацкий сомнительный налоговый. Космос естественный сверкающий через. Миллиард приятель мера славный другой очутиться.","maxScore":97,"minScore":25,"description":"Деньги райком эффект миф основание тяжелый.","estimatedTime":"2 weeks","previewFileId":"0ac768b3-0e85-4d2d-9bbf-02c749c6c0a8","createdByUserId":"44093657-c24e-46d2-81e5-52ac0cade9a5"}'

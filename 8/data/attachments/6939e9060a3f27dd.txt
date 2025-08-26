@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjAyLjI1Nzg5NCIsInVzZXJfaWQiOiI0YTIyOThmZS0zZTg4LTQ3YjYtOTI2Ny1jYzNlYTBjMGE5OGIifQ.HGYdCQUQWz_AhdQXDhhs_YAfMNSN5Uf3j-XVzd6ttvk' \
+  -H 'content-length: 259' \
+  -H 'content-type: application/json' \
+  -d '{"title":"","maxScore":79,"minScore":10,"description":"Настать холодно витрина очутиться.","estimatedTime":"4 weeks","previewFileId":"85d44ccb-51a3-4545-bcb9-0cf23ba24e7c","createdByUserId":"38040d44-9940-4c71-a467-6a6ca3f19a71"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjE3LjkwMTQ1MSIsInVzZXJfaWQiOiIwNGE4MzIzMS00YzFhLTQ0MmYtOGY5MS02NDlmMzVlNmQ3NzMifQ.cx7yPILi67lT_Tsgap_thzd8r9jQZc146AsT68t2rD8' \
+  -H 'content-length: 428' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Кпсс степь правление да спалить. Разнообразный поздравлять зато мусор.","maxScore":56,"minScore":39,"description":"Роскошный рота упорно юный горький ленинград провинция.","estimatedTime":"1 weeks","previewFileId":"e0718267-adf6-4a38-8944-41e0fa5c6373","createdByUserId":"04a83231-4c1a-442f-8f91-649f35e6d773"}'

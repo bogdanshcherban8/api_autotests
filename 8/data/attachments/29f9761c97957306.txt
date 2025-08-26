@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjAzLjQzMDM3NSIsInVzZXJfaWQiOiI0NWZmNDc5NS04NTFiLTQyYWMtYWYxOC1mYmZhMTA4NWQyMWEifQ.ZW-Z-QEZREzeDHQ_op5RZLysnswgBfxuPU_6z6VDNsk' \
+  -H 'content-length: 479' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Дрогнуть радость пространство сверкать хлеб разводить собеседник. Славный редактор дальний плод поезд материя возбуждение.","maxScore":98,"minScore":3,"description":"Спорт снимать неправда пятеро.","estimatedTime":"1 weeks","previewFileId":"6ec95ebe-2da0-4d0b-b7ce-e2d0f44ad662","createdByUserId":"45ff4795-851b-42ac-af18-fbfa1085d21a"}'

@@ -1,0 +1,14 @@
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:17 Make PATCH request to http://localhost:8000/api/v1/courses/92f4978b-e808-480c-9dc8-6f284da977dd
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 200 OK from http://localhost:8000/api/v1/courses/92f4978b-e808-480c-9dc8-6f284da977dd
+INFO     SCHEMA_ASSERTIONS:json_schema.py:12 Validate JSON schema
+INFO     BASE_ASSERTIONS:assert_status_code.py:8 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:30 Check update course response
+INFO     BASE_ASSERTIONS:assert_equal.py:10 Check that title equals to New Course!

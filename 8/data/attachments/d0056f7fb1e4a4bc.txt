@@ -1,0 +1,2 @@
+INFO     HTTP_CLIENT:event_hooks.py:17 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:21 Got response 401 Unauthorized from http://localhost:8000/api/v1/authentication/login

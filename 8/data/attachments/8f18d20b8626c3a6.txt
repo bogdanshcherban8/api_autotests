@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjIwLjU3Mzk4NSIsInVzZXJfaWQiOiIyMDMxZTk1MC0yNjRkLTQ5NzEtYThiZC04NTllMzQwNzY0YjUifQ.Yu30PH1Ck_wxe0fwXEO3Hft1ukFpQ1vH_r70kd2W4xg' \
+  -H 'content-length: 609' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Постоянный пространство очередной трубка. Да написать задрать. Термин табак пересечь единый.\nПонятный разводить очередной еврейский. Освобождение терапия спорт.","maxScore":95,"minScore":10,"description":"Тревога роскошный что собеседник правление наткнуться нервно.","estimatedTime":"4 weeks","previewFileId":"c1bb3ee6-06bc-4bf5-b583-ac81370308cf","createdByUserId":"2031e950-264d-4971-a8bd-859e340764b5"}'

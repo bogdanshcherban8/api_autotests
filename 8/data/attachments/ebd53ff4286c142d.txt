@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjEyLjQ0NDA4NCIsInVzZXJfaWQiOiIyODk5ZDM0ZC02YjdkLTQwOTUtOTZiZS0xYzZlYTNkNjViZmEifQ.XBJJB4THrduxV5LpRSJrJZ2T-eiN0ebc46i8q0iddbI' \
+  -H 'content-length: 543' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Салон еврейский инструкция да спичка через. Ответить картинка невыносимый подробность увеличиваться необычный салон. Задрать разуметься плод еврейский возмутиться возбуждение.","courseId":"feb34682-a216-4da0-8211-262ac3f2998e","maxScore":29,"minScore":6,"orderIndex":4,"description":"Лететь сходить тюрьма рай эффект пол.","estimatedTime":"2 days"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjEwLjAzOTczNCIsInVzZXJfaWQiOiI2NmQxNTYyMi0wNmQ0LTRmNDItOTRjYy1iZDYxZDA4MTQ2YWEifQ.vT-m6XFJxOYXVKNsQ0Txuk-B82dL9Ql24WJ5rcr7W-A' \
+  -H 'content-length: 407' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Другой налево выразить невозможно степь мрачно. Вытаскивать указанный грустный даль порог.","maxScore":68,"minScore":9,"description":"Сбросить присесть салон.","estimatedTime":"1 weeks","previewFileId":"510b800b-3492-483f-9f93-e786356dc870","createdByUserId":"66d15622-06d4-4f42-94cc-bd61d08146aa"}'

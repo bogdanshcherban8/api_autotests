@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjEzLjY3MDYxOSIsInVzZXJfaWQiOiJmZjI3NmNhMy1jYmZjLTRkNDYtYmYyOS1lMGE2MWJkNTFkOGMifQ.DKAon4yX9tdsq6vK1Up6DWamPe9ZurnZPfO8H3UO4vg' \
+  -H 'content-length: 542' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Степь достоинство банда функция да. Бабочка мелочь кпсс коллектив рай плод мелочь. Ночь смертельный факультет назначить казнь домашний роса.","maxScore":58,"minScore":37,"description":"Бак необычный пробовать угроза господь вывести.","estimatedTime":"4 weeks","previewFileId":"15c32daf-2e1f-4dcc-9179-c8374fe7a187","createdByUserId":"ff276ca3-cbfc-4d46-bf29-e0a61bd51d8c"}'

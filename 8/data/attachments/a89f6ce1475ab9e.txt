@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI3OjU4LjM2NjA1OSIsInVzZXJfaWQiOiI2MmQxNmZkNy01NDE3LTRjZDUtOGUxNi01NDA2Y2JiOGNmNzUifQ.cuT7HenyHTmkid6ZMKbUE9bfKoWP16rcWFvhwmKaMD8' \
+  -H 'content-length: 558' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Магазин голубчик мотоцикл дрогнуть невыносимый плод. Другой командующий шлем князь народ. Успокоиться зеленый девка заплакать.\nБеспомощный горький болото господь ломать рай дремать предоставить.","maxScore":62,"minScore":37,"description":"","estimatedTime":"1 weeks","previewFileId":"be267ff2-806b-440c-a4d5-1a8d30ad8138","createdByUserId":"09596b53-c22c-4f98-843c-d960522a2124"}'

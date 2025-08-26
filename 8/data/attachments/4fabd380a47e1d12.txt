@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA0LjA4MDIwOCIsInVzZXJfaWQiOiJlNjQ3MWE3Mi02MjlmLTQ1MjgtYWE5YS1lOTM1Njc3YTQyNmUifQ.Xf2oJyf9PdjAEbfbkHoKYxYXfP6fQvm_4HpllMmTQSQ' \
+  -H 'content-length: 465' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Посидеть невозможно полностью палка. Рота адвокат сверкающий вздрогнуть солнце.","maxScore":77,"minScore":22,"description":"Витрина спорт трясти песенка развернуться холодно виднеться тута.","estimatedTime":"4 weeks","previewFileId":"2da5fc2c-9b13-45c1-9601-6fadd01391b7","createdByUserId":"e6471a72-629f-4528-aa9a-e935677a426e"}'

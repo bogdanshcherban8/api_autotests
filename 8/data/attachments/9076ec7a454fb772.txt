@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjExLjI2MjM1NCIsInVzZXJfaWQiOiI4NWI3ZTk1ZC02NTU3LTQ2NzctODRmMi1hZDNkNmRhYTMxZTIifQ.CQWle_lcMTLBm8EzZuyI26RA4zl3T5zPjSucZwRbCKM' \
+  -H 'content-length: 548' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ягода мера монета славный подземный отражение покинуть. Указанный смелый отдел потрясти самостоятельно. Коричневый мотоцикл поколение.","maxScore":90,"minScore":25,"description":"Кольцо еврейский умолять зарплата прощение изображать.","estimatedTime":"1 weeks","previewFileId":"23e73d94-0c18-41f6-871e-7bb1cca2872f","createdByUserId":"85b7e95d-6557-4677-84f2-ad3d6daa31e2"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjE2LjY3NDg3NiIsInVzZXJfaWQiOiIwMDE4MTQ0Ni03YWYzLTQ1OGItOTE1Mi0wYjY3ZDZkMjU5NTEifQ.f2AmFv87KCF7ThDVlb0R-m4lCpov7YSSn7dBE-eTRCI' \
+  -H 'content-length: 634' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Очередной применяться выдержать витрина посидеть смертельный аллея сынок. Направо точно издали.\nДальний разуметься невыносимый. Светило беспомощный выразить. Прежде художественный господь.","maxScore":79,"minScore":4,"description":"Пламя вперед ложиться пропасть художественный.","estimatedTime":"3 weeks","previewFileId":"37348ae2-1136-447d-b031-fcac5158c36f","createdByUserId":"00181446-7af3-458b-9152-0b67d6d25951"}'

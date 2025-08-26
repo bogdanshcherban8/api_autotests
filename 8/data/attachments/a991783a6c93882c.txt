@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA3LjAyMzI5NSIsInVzZXJfaWQiOiJiNDIzOTAwYi1mOTcwLTRmNjUtYWVmNC00NjQ0NDkxOGU3NGMifQ.DSaQgxjmvZ3FmXctUlX-LDJmLgwLkCy2NZ_6jy1Cf9s' \
+  -H 'content-length: 519' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Роса карман число оставить реклама изба налево. Художественный покинуть передо теория. Умирать бабочка нож отметить.","maxScore":60,"minScore":9,"description":"Торопливый сверкать возбуждение правление светило военный.","estimatedTime":"1 weeks","previewFileId":"dd0a4020-39a7-44a0-a4a7-2d3941cffaa1","createdByUserId":"b423900b-f970-4f65-aef4-46444918e74c"}'

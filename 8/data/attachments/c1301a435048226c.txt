@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjE5LjM3MjkxOCIsInVzZXJfaWQiOiJiMmFkODJhOC0zNmQyLTQxODUtOTVlNC04NmRkMmM4YjFiNDYifQ.Xrjl87j_MExdpHniPtvCnDc4OKkPiNvrQRXwNPHYAz0' \
+  -H 'content-length: 429' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Секунда даль ребятишки лететь триста. Возбуждение дыхание цепочка куча выраженный трясти.","maxScore":89,"minScore":32,"description":"Миллиард иной ученый пол волк валюта.","estimatedTime":"4 weeks","previewFileId":"baea7a2f-227d-49dc-bbe2-fd4c767cda53","createdByUserId":"b2ad82a8-36d2-4185-95e4-86dd2c8b1b46"}'

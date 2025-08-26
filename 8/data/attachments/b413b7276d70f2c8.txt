@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjAwLjQ1OTM4MiIsInVzZXJfaWQiOiJhYTFlZTYyMS00NjQyLTQ5ZDctYTNjYS1jNDYzZmRmYTFjZjYifQ.aaJWP9UXJZxZm_ZVFLJJ_fUqvgEW7ZKb7zxdmLmBRWM' \
+  -H 'content-length: 519' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Дошлый чем ныне дружно выраженный приходить тревога пространство. Заложить сутки цель полоска опасность. Успокоиться ночь парень помолчать сомнительный госпожа.","maxScore":57,"minScore":30,"description":"Народ видимо еврейский упор кожа.","estimatedTime":"3 weeks","previewFileId":"","createdByUserId":"859dae56-dd37-4b3c-a2d2-e39f9a62e387"}'

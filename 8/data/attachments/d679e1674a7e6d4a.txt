@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTI2VDE4OjI4OjA4Ljg1NjY4NSIsInVzZXJfaWQiOiI4YjIzNTBlYS05OTM3LTQ2ZjAtODllOS0xNzM4M2UzYmVmZTIifQ.FR3ZJArv05qeyDzYFOEXZAlVMWxcvKwKIGzvC3KPvAs' \
+  -H 'content-length: 487' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Угроза прежний голубчик рота лиловый. Пропасть экзамен крыса следовательно скрытый мелочь выражаться. Очередной художественный каюта мучительно хлеб полюбить.","courseId":"","maxScore":36,"minScore":14,"orderIndex":6,"description":"Покинуть пятеро новый покинуть ночь палата.","estimatedTime":"7 days"}'
